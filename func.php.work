@@ -1,0 +1,24 @@
+<?php 
+//последние сообшения от серверов
+function users(){
+  echo "<h2>последний сообщения от серверов</h2>";
+  $db = new SQLite3('test.db');
+  $results = $db->query("SELECT * FROM test");
+  while ($row = $results->fetchArray()) {
+  	   echo "{$row['node']} {$row['event']} {$row['dat']} \n </br>";
+  }
+    $db->close();
+}
+
+//список узлов 
+
+  function dropdown(){
+	  $db = new SQLite3('test.db');
+	  $results = $db->query("SELECT node FROM test");
+	  while ($row = $results->fetchArray()) {
+	  echo "<option value=\"owner1\">" . $row['node'] . "</option>";
+}  
+
+  $db->close();
+}
+ ?>
