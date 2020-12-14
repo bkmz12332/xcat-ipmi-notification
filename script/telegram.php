@@ -14,10 +14,10 @@
 
 
 // сюда нужно вписать токен вашего бота
-define('TELEGRAM_TOKEN', '1239131409:AAFBLja_1LMUGwt8VXQ59yMb45EoRqAGGSc');
+define('TELEGRAM_TOKEN', '');
 
 // сюда нужно вписать ваш внутренний айдишник
-define('TELEGRAM_CHATID', '880667221');
+define('TELEGRAM_CHATID', '');
 
 //$message = $message1;
 
