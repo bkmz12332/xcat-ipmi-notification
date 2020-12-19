@@ -1,11 +1,10 @@
 <meta charset="utf-8">
-<?php include_once('func.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>Настройки телеги</title>
 </head>
-<form action="app/check.php" method="post">
+<form action="app/telega_settings.php" method="post">
 
 <p>Chat ID: <input name="chat_id" type="text"></p>
 

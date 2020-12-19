@@ -5,7 +5,7 @@
 <head>
   <title>последние сообщения от серверов</title>
 </head>
-<form method="POST" action="app/action.php">
+<form method="POST" action="action.php">
 
 <select name='Count' onchange="document.getElementById(this.value).style.display='block';">
 <option>список узлов</option>
@@ -41,7 +41,7 @@ echo show_node();
 ?>
 
 <body>
-    <button onclick="window.location.href = 'http://127.0.0.1:/telega.php';">Click Here</button>
+    <button onclick="window.location.href = 'http://127.0.0.1:/telega.php';">Alert Settings</button>
 </body>
 	
 </body>
