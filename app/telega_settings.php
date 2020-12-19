@@ -1,12 +1,14 @@
 <?php
-echo $_POST['Count']."<br>"; //выводим запрос из html
- $post = $_POST['Count']; // записываем запрос из HTML в переменную
-	  $db = new SQLite3('..\telega.db');
-	  $results = $db->query("SELECT * FROM `test` WHERE `node` ='".$post."' ORDER BY `dat` DESC"); // запрос с переменной
-	  while ($row = $results->fetchArray()) {
-		 echo "{$row['node']} {$row['dat']} {$row['event']} {$row['taim']} \n </br>";
 
-	  }
+$chat_id = $_POST['chat_id']; // записывает запрос из веб формы в переменную
+//$bot_api_token =$_POST['bot_api_token'] // записываем запрос из веб формы в переменную 
 
-	  $db->close();
+
+$db = new SQLite3('telega.db' );
+
+$db->query("BEGIN;
+        CREATE TABLE telega(id INTEGER PRIMARY KEY, chat_id CHAR(255), bot_api_token);
+	INSERT INTO telega (chat_id) VALUES('$chat_id');
+/   	COMMIT;");
+echo $_POST['chat_id']."<br>";
 ?>
