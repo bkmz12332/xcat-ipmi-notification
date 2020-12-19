@@ -1,3 +1,4 @@
+<?php include_once('func.php'); ?>
 <meta charset="utf-8">
 <!DOCTYPE html>
 <html>
@@ -11,6 +12,14 @@
 <p>BOT API Token: <input name="bot_api_token" type="text"></p>
 
 <p><input type='submit' value='Отправить'></p>
+
+<?php
+{
+
+echo show_telega_credentials();
+}
+?>
+
 
 </form>
 </html>
