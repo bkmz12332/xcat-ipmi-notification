@@ -1,12 +1,13 @@
 #!/bin/bash
 # while true; do /usr/local/bin/reventlog_last;sleep 70; done; 
 #
+. ./etc/ipmi-collector.conf
 while true
 do
 
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/xcat/bin:/opt/xcat/sbin
 events=$(sqlite3 /tmp/test.db 'select * from test' | tail -1)
-sleep 90
+sleep 5
 
 rm -rf /tmp/ipmi_event_node
 rm -rf /tmp/list_ipmi_ip
@@ -69,15 +70,13 @@ if [ "$events" == "$lastevents" ]; then
 else
 
 #TOKEN Telegram BOT	
-TOKEN=
 #CHAT ID Telegram BOT
-CHAT_ID=
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 
 curl -s -X POST $URL -d chat_id=$CHAT_ID -d text="$lastevents"
 
 fi
 
-sleep 70
+sleep 10
 done
 
