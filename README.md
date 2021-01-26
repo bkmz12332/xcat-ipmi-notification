@@ -14,7 +14,7 @@
 
 1) Скачать скрипт ipmi-collector.sh 
 
-2) добавить значения TOKEN=  CHAT_ID= отредактировав скрипт  ipmi-collector.sh 
+2) добавить значения TOKEN=  CHAT_ID= отредактировав скрипт  ipmi-collector.sh (TOKEN=  CHAT_ID= как раз и есть информация о боте)
 
 3) запустить скрипт в фоновом режиме командой bash ipmi-collector.sh &
 
