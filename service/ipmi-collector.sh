@@ -68,9 +68,10 @@ if [ "$events" == "$lastevents" ]; then
         echo "no change"
 else
 
+#TOKEN Telegram BOT	
 TOKEN=1239131409:AAFBLja_1LMUGwt8VXQ59yMb45EoRqAGGSc
+#CHAT ID Telegram BOT
 CHAT_ID=880667221
-#MESSAGE="Hello World"
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 
 curl -s -X POST $URL -d chat_id=$CHAT_ID -d text="$lastevents"
