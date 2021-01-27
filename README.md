@@ -1,4 +1,4 @@
-# ipmi-collector
+
 
 **Описание**
 
